@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +22,8 @@ public class cityFinder extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                finishAfterTransition();;
             }
         });
 
@@ -35,9 +35,7 @@ public class cityFinder extends AppCompatActivity {
                 intent.putExtra("City",newCity);
                 startActivity(intent);
 
-
-
-                return false;
+                return true;
             }
         });
 
